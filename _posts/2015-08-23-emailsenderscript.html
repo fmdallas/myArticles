@@ -2,10 +2,627 @@
 layout: default
 title: 邮件推送脚本
 ---
+<html lang="zh-cn" class="ng-scope" data-useragent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/600.7.12 (KHTML, like Gecko) Version/8.0.7 Safari/600.7.12">
 
 <h2> {{ page.title }} </h2>
 
-<p> 我的第一篇文章 </p>
+<head>
+    <style type="text/css">@charset "GB2312;";
+    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide {
+        display: none !important;
+    }
+
+    ng\:form {
+        display: block;
+    }
+
+    .ng-animate-block-transitions {
+        transition: 0s all !important;
+        -webkit-transition: 0s all !important;
+    }
+
+    .ng-hide-add-active, .ng-hide-remove {
+        display: block !important;
+    }</style>
+
+    <meta charset="GB2312">
+
+    <base target="_top">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="x-rim-auto-match" content="none">
+
+    <script src="//hm.baidu.com/hm.js?ffe6968809d7872701e07ea21cce5427"></script>
+    <script>
+        var doc = document.documentElement;
+        doc.setAttribute('data-useragent', navigator.userAgent);
+    </script>
+
+
+    <link rel="stylesheet" href="http://stc.xiumi.us/3rd/CDN/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="http://stc.xiumi.us/apps/board/styles/c0e3ab.board.min.css">
+
+
+    <style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+    .en-markup-crop-options {
+        top: 18px !important;
+        left: 50% !important;
+        margin-left: -100px !important;
+        width: 200px !important;
+        border: 2px rgba(255, 255, 255, .38) solid !important;
+        border-radius: 4px !important;
+    }
+
+    .en-markup-crop-options div div:first-of-type {
+        margin-left: 0px !important;
+    }
+    </style>
+</head>
+<body class="full-height-box board-body">
+
+<div class="inner ng-scope" ng-controller="BoardDeskController">
+<section class="tn-article-section container">
+
+<section class="row tn-board-body tn-article-content-context">
+<!-- ngIf: !showData -->
+
+<!-- ngRepeat: slice in slices -->
+<div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+    <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts">
+        <!-- ngInclude: (page.templateId) | templateIdToPath: templatePath -->
+        <div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath">
+            <fieldset style="border:none; margin: 0" class="ng-scope">
+                <section style="width: 100%; margin-right: 2em; margin-bottom: 3em; font-size: 100%; font-family: inherit; font-style: normal; font-weight: inherit; text-align: justify; text-decoration: inherit; color: rgb(0, 0, 0); border-color: rgb(249, 110, 87); background-color: transparent;" tn-page-editable="richtext0" tn-not-editable-attr="backgroundColor" tn-page-editable-type="ed-type-rich-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor),
+  'background-color': (eo.backgroundColor || theme.majorColor),
+  'border-color'    : (eo.borderColor || theme.majorColor)
+} " class="ng-scope tn-page-editable">
+                    <section style="width: 100%">
+                        <section style="width: 100%; float: left; border-top-width: 1px; border-top-style: solid; border-color: rgb(249, 110, 87);" ng-style="{ 'border-color': (eo.borderColor || theme.majorColor)
+                        }"></section>
+                        <section style="float: left;background-color: white; margin-top:-1px">
+                            <section style="width: 0px; height: 8px; border-left-width: 1px; border-left-style: solid; border-color: rgb(249, 110, 87); margin-left: 23px;" ng-style="{ 'border-color': (eo.borderColor || theme.majorColor)
+                        }"></section>
+                            <section style="width: 16px; margin-left: 8px">
+                                <section style="width: 16px; height: 8px; border-left-width: 1px; border-left-style: solid; border-color: rgb(249, 110, 87); border-right-width: 1px; border-right-style: solid; border-bottom-width: 1px; border-bottom-style: solid;" ng-style="{ 'border-color': (eo.borderColor || theme.majorColor)
+                        }"></section>
+                                <section style="width: 8px; height: 16px; margin-top: -8px; border-top-width: 1px; border-top-style: solid; border-color: rgb(249, 110, 87); border-right-width: 1px; border-right-style: solid; border-bottom-width: 1px; border-bottom-style: solid;" ng-style="{ 'border-color': (eo.borderColor || theme.majorColor)
+                        }"></section>
+                            </section>
+                            <section style="width: 8px; height: 16px; border-top-width: 1px; border-top-style: solid; border-color: rgb(249, 110, 87); border-left-width: 1px; border-left-style: solid; margin-top: -1px;" ng-style="{ 'border-color': (eo.borderColor || theme.majorColor)
+                        }"></section>
+                        </section>
+                        <section style="float: right; background-color: white; margin-top:-1px">
+                            <section style="width: 0px; height: 8px; border-right-width: 1px; border-right-style: solid; border-color: rgb(249, 110, 87); margin-right: 8px;" ng-style="{ 'border-color': (eo.borderColor || theme.majorColor)
+                        }"></section>
+                            <section style="width: 16px;  margin-top: -1px">
+                                <section style="width: 16px; height: 8px; border-right-width: 1px; border-right-style: solid; border-color: rgb(249, 110, 87); border-left-width: 1px; border-left-style: solid; border-bottom-width: 1px; border-bottom-style: solid;" ng-style="{ 'border-color': (eo.borderColor || theme.majorColor)
+                        }"></section>
+                                <section style="width: 8px; height: 16px; margin-top: -8px; margin-left: 8px; border-left-width: 1px; border-left-style: solid; border-color: rgb(249, 110, 87); border-bottom-width: 1px; border-bottom-style: solid; border-top-width: 1px; border-top-style: solid;" ng-style="{ 'border-color': (eo.borderColor || theme.majorColor)
+                        }"></section>
+                            </section>
+                            <section style="width: 8px; height: 16px; margin-top: -1px; margin-left: 16px; border-top-width: 1px; border-top-style: solid; border-color: rgb(249, 110, 87); border-right-width: 1px; border-right-style: solid;" ng-style="{ 'border-color': (eo.borderColor || theme.majorColor)
+                        }"></section>
+                        </section>
+                    </section>
+                    <section style="clear: both"></section>
+                    <section style="width: 100%;margin: -1em 5% 1.3em 5%" ng-bind-html="eo.text | eol2br | unsafe" class="tn-rich-text-content ng-scope ng-binding">
+                        <section style="text-align: left;">
+                            糖堂(sweetclass)是一款创新的移动社交化学习应用，比QQ群、微信群更为实用的垂直化教育移动app。希望通过老师、家长、小朋友三方互动，提升教学效果，让教与学的过程变得更加轻松、快乐、有趣。我们主要的服务对象为K12年龄段的师生(1-6年级)
+                        </section>
+                    </section>
+                    <section style="width: 100%; margin-top: 1em">
+                        <section style="width: 100%; margin-bottom: -37px; border-top-width: 1px; border-top-style: solid; border-color: rgb(249, 110, 87);" ng-style="{ 'border-color': (eo.borderColor || theme.majorColor)
+                        }"></section>
+                        <section style="float: left;
+                        margin-top: -1px;
+                        background-color: white">
+                            <section style="width: 8px; height: 16px; border-bottom-width: 1px; border-bottom-style: solid; border-color: rgb(249, 110, 87); border-left-width: 1px; border-left-style: solid; margin-top: -1px;" ng-style="{ 'border-color': (eo.borderColor || theme.majorColor)
+                        }"></section>
+                            <section style="width: 16px; margin-left: 8px; margin-top: -1px">
+                                <section style="width: 8px; height: 16px; border-bottom-width: 1px; border-bottom-style: solid; border-color: rgb(249, 110, 87); border-right-width: 1px; border-right-style: solid; border-top-width: 1px; border-top-style: solid;" ng-style="{ 'border-color': (eo.borderColor || theme.majorColor)
+                        }"></section>
+                                <section style="width: 16px; height: 8px; margin-top: -8px; border-top-width: 1px; border-top-style: solid; border-color: rgb(249, 110, 87); border-right-width: 1px; border-right-style: solid; border-left-width: 1px; border-left-style: solid;" ng-style="{ 'border-color': (eo.borderColor || theme.majorColor)
+                        }"></section>
+                            </section>
+                            <section style="width: 0px; height: 8px; border-left-width: 1px; border-left-style: solid; border-color: rgb(249, 110, 87); margin-left: 23px;" ng-style="{ 'border-color': (eo.borderColor || theme.majorColor)
+                        }"></section>
+                        </section>
+                        <section style="float: right;margin-top: -2px; background-color: white">
+                            <section style="width: 8px; height: 16px; margin-bottom: 1px; margin-left: 16px; border-bottom-width: 1px; border-bottom-style: solid; border-color: rgb(249, 110, 87); border-right-width: 1px; border-right-style: solid;" ng-style="{ 'border-color': (eo.borderColor || theme.majorColor)
+                        }"></section>
+                            <section style="width: 16px; margin-top: -2px">
+                                <section style="width: 8px; height: 16px; margin-left: 8px; border-top-width: 1px; border-top-style: solid; border-color: rgb(249, 110, 87); border-left-width: 1px; border-left-style: solid; border-bottom-width: 1px; border-bottom-style: solid;" ng-style="{ 'border-color': (eo.borderColor || theme.majorColor)
+                        }"></section>
+                                <section style="width: 16px; height: 8px; margin-top: -8px; margin-right: 18px; border-left-width: 1px; border-left-style: solid; border-color: rgb(249, 110, 87); border-right-width: 1px; border-right-style: solid; border-top-width: 1px; border-top-style: solid;" ng-style="{ 'border-color': (eo.borderColor || theme.majorColor)
+                        }"></section>
+                            </section>
+                            <section style="width: 0px; height: 8px; border-right-width: 1px; border-right-style: solid; border-color: rgb(249, 110, 87);" ng-style="{ 'border-color': (eo.borderColor || theme.majorColor)
+                        }"></section>
+                        </section>
+                    </section>
+                </section>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<!-- end ngRepeat: slice in slices -->
+<div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+    <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts">
+        <!-- ngInclude: (page.templateId) | templateIdToPath: templatePath -->
+        <div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath">
+            <fieldset style="border: 0px; margin-top: 0px; margin-bottom: 0px; clear: both; font-size: 1em; font-family: inherit; font-style: normal; font-weight: inherit; text-align: justify; text-decoration: inherit; color: inherit;" tn-page-editable="text0" class="ng-scope tn-page-editable ng-binding" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe">
+                <section><br></section>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<!-- end ngRepeat: slice in slices -->
+<div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+    <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts">
+        <!-- ngInclude: (page.templateId) | templateIdToPath: templatePath -->
+        <div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath">
+            <fieldset style="border:0;margin: 0.8em 0 0.5em 0" class="ng-scope">
+                <section style="display: inline-block; padding: 0px 2px 2px; box-sizing: border-box; border-bottom-width: 2px; border-bottom-style: solid; border-color: rgb(249, 110, 87); line-height: 1; font-size: 1em; font-family: inherit; font-style: normal; font-weight: inherit; text-align: center; text-decoration: inherit; color: white; background-color: transparent;" tn-page-editable="richtext0" tn-not-editable-attr="backgroundColor" tn-page-editable-type="ed-type-rich-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor),
+  'background-color': (eo.backgroundColor || theme.majorColor),
+  'border-color'    : (eo.borderColor || theme.majorColor)
+} " class="ng-scope tn-page-editable">
+                    <section style="display: inline-block; margin: 0px; padding: 0.3em 0.4em; min-width: 1.8em; min-height: 1.6em; border-radius: 80% 100% 90% 20%; line-height: 1; word-wrap: break-word !important; font-size: 1em; font-family: inherit; font-style: normal; text-align: center; color: white; background-color: rgb(249, 110, 87);" ng-style="{ 'font-size': eo.fontSize, 'font-family': eo.fontFamily, 'font-style': eo.fontStyle, 'font-weight': eo.fontWeight,
+            'text-align': eo.textAlign, 'text-decoration': eo.textDecoration, 'color': eo.color , 'background-color': (eo.borderColor || theme.majorColor)}" ng-bind-html="eo.text | eol2br | unsafe" class="tn-rich-text-content ng-scope ng-binding">
+                        <section>1</section>
+                    </section><span style="display: inline-block; margin-left: 0.4em; max-width: 100%; color: rgb(0, 112, 192); line-height: 1.4;
+              font-size: 1em; word-wrap: break-word !important"><strong style="max-width: 100%; word-wrap: break-word !important; font-size: 1em; font-family: inherit; font-style: normal; font-weight: bolder; text-align: inherit; text-decoration: inherit; color: rgb(249, 110, 87);" tn-page-editable="text1" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe" class="ng-scope tn-page-editable ng-binding">
+                    <section><span style="font-weight: normal;">生动有趣的语音作业</span></section>
+                </strong></span></section>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<!-- end ngRepeat: slice in slices -->
+<div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+    <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts">
+        <!-- ngInclude: (page.templateId) | templateIdToPath: templatePath -->
+        <div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath">
+            <fieldset style="border: 0px; margin-top: 0px; margin-bottom: 0px; clear: both; font-size: 100%; font-family: inherit; font-style: normal; font-weight: inherit; text-align: justify; text-decoration: inherit; color: inherit;" tn-page-editable="text0" class="ng-scope tn-page-editable ng-binding" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe">
+                <section><br></section>
+                <section style="width:100%">
+                    支持语音、图片、文字形式的作业，生动有趣。为小朋友们提供一种全新的社会化学习体验。同个班级的小朋友可以在相互学习与模仿的过程中得到更多的学习乐趣及成长。
+                </section>
+                <section><br></section>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<!-- end ngRepeat: slice in slices -->
+<div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+    <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts">
+        <!-- ngInclude: (page.templateId) | templateIdToPath: templatePath -->
+        <div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath">
+            <fieldset style="border:0;box-sizing: border-box; width: 100%; margin: 0.8em 0 0.2em 0;clear: both" class="ng-scope"><img style="box-sizing: border-box;
+              width: 50%;
+              height: auto !important;
+              text-align: start" src="http://statics.xiumi.us/xmi/rc/6STZ/i/c03e1db2c118c71619666c52af878441-sz_418894.png" tn-page-editable="img0" tn-page-editable-type="image" ng-src="http://statics.xiumi.us/xmi/rc/6STZ/i/c03e1db2c118c71619666c52af878441-sz_418894.png" class="ng-scope tn-page-editable"></fieldset>
+        </div>
+    </div>
+</div>
+<!-- end ngRepeat: slice in slices -->
+<div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+    <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts">
+        <!-- ngInclude: (page.templateId) | templateIdToPath: templatePath -->
+        <div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath">
+            <fieldset style="border: 0px; margin-top: 0px; margin-bottom: 0px; clear: both; font-size: 1em; font-family: inherit; font-style: normal; font-weight: inherit; text-align: justify; text-decoration: inherit; color: inherit;" tn-page-editable="text0" class="ng-scope tn-page-editable ng-binding" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe">
+                <section><br></section>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<!-- end ngRepeat: slice in slices -->
+<div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+    <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts">
+        <!-- ngInclude: (page.templateId) | templateIdToPath: templatePath -->
+        <div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath">
+            <fieldset style="border:0;margin: 0.8em 0 0.5em 0" class="ng-scope">
+                <section style="display: inline-block; padding: 0px 2px 2px; box-sizing: border-box; border-bottom-width: 2px; border-bottom-style: solid; border-color: rgb(249, 110, 87); line-height: 1; font-size: 1em; font-family: inherit; font-style: normal; font-weight: inherit; text-align: center; text-decoration: inherit; color: white; background-color: transparent;" tn-page-editable="richtext0" tn-not-editable-attr="backgroundColor" tn-page-editable-type="ed-type-rich-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor),
+  'background-color': (eo.backgroundColor || theme.majorColor),
+  'border-color'    : (eo.borderColor || theme.majorColor)
+} " class="ng-scope tn-page-editable">
+                    <section style="display: inline-block; margin: 0px; padding: 0.3em 0.4em; min-width: 1.8em; min-height: 1.6em; border-radius: 80% 100% 90% 20%; line-height: 1; word-wrap: break-word !important; font-size: 1em; font-family: inherit; font-style: normal; text-align: center; color: white; background-color: rgb(249, 110, 87);" ng-style="{ 'font-size': eo.fontSize, 'font-family': eo.fontFamily, 'font-style': eo.fontStyle, 'font-weight': eo.fontWeight,
+            'text-align': eo.textAlign, 'text-decoration': eo.textDecoration, 'color': eo.color , 'background-color': (eo.borderColor || theme.majorColor)}" ng-bind-html="eo.text | eol2br | unsafe" class="tn-rich-text-content ng-scope ng-binding">
+                        <section>2</section>
+                    </section><span style="display: inline-block; margin-left: 0.4em; max-width: 100%; color: rgb(0, 112, 192); line-height: 1.4;
+              font-size: 1em; word-wrap: break-word !important"><strong style="max-width: 100%; word-wrap: break-word !important; font-size: 1em; font-family: inherit; font-style: normal; font-weight: bolder; text-align: inherit; text-decoration: inherit; color: rgb(249, 110, 87);" tn-page-editable="text1" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe" class="ng-scope tn-page-editable ng-binding">
+                    <section><span style="font-weight: normal;">移动化的作业管理体验</span></section>
+                </strong></span></section>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<!-- end ngRepeat: slice in slices -->
+<div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+    <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts">
+        <!-- ngInclude: (page.templateId) | templateIdToPath: templatePath -->
+        <div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath">
+            <fieldset style="border: 0px; margin-top: 0px; margin-bottom: 0px; clear: both; font-size: 100%; font-family: inherit; font-style: normal; font-weight: inherit; text-align: justify; text-decoration: inherit; color: inherit;" tn-page-editable="text0" class="ng-scope tn-page-editable ng-binding" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe">
+                <section><br></section>
+                <section style="width:100%">
+                    通过糖堂，老师们可以随时随地的进行作业的布置、检查、批改等，并方便的分享到社交网络，如微信群等，让家长第一时间了解自己的小孩子的学习情况，更好的配合老师的教学。
+                </section>
+                <section><br></section>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<!-- end ngRepeat: slice in slices -->
+<div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+    <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts">
+        <!-- ngInclude: (page.templateId) | templateIdToPath: templatePath -->
+        <div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath">
+            <fieldset style="border:0;box-sizing: border-box; width: 100%; margin: 0.8em 0 0.2em 0;clear: both" class="ng-scope"><img style="box-sizing: border-box;
+              width: 50%;
+              height: auto !important;
+              text-align: start" src="http://statics.xiumi.us/xmi/rc/6STZ/i/b81254cb2a650d330a5ae2f5638d8b0a-sz_698712.png" tn-page-editable="img0" tn-page-editable-type="image" ng-src="http://statics.xiumi.us/xmi/rc/6STZ/i/b81254cb2a650d330a5ae2f5638d8b0a-sz_698712.png" class="ng-scope tn-page-editable"></fieldset>
+        </div>
+    </div>
+</div>
+<!-- end ngRepeat: slice in slices -->
+<div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+    <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts">
+        <!-- ngInclude: (page.templateId) | templateIdToPath: templatePath -->
+        <div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath">
+            <fieldset style="border: 0px; margin-top: 0px; margin-bottom: 0px; clear: both; font-size: 1em; font-family: inherit; font-style: normal; font-weight: inherit; text-align: justify; text-decoration: inherit; color: inherit;" tn-page-editable="text0" class="ng-scope tn-page-editable ng-binding" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe">
+                <section><br></section>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<!-- end ngRepeat: slice in slices -->
+<div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+    <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts">
+        <!-- ngInclude: (page.templateId) | templateIdToPath: templatePath -->
+        <div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath">
+            <fieldset style="border:0;margin: 0.8em 0 0.5em 0" class="ng-scope">
+                <section style="display: inline-block; padding: 0px 2px 2px; box-sizing: border-box; border-bottom-width: 2px; border-bottom-style: solid; border-color: rgb(249, 110, 87); line-height: 1; font-size: 1em; font-family: inherit; font-style: normal; font-weight: inherit; text-align: center; text-decoration: inherit; color: white; background-color: transparent;" tn-page-editable="richtext0" tn-not-editable-attr="backgroundColor" tn-page-editable-type="ed-type-rich-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor),
+  'background-color': (eo.backgroundColor || theme.majorColor),
+  'border-color'    : (eo.borderColor || theme.majorColor)
+} " class="ng-scope tn-page-editable">
+                    <section style="display: inline-block; margin: 0px; padding: 0.3em 0.4em; min-width: 1.8em; min-height: 1.6em; border-radius: 80% 100% 90% 20%; line-height: 1; word-wrap: break-word !important; font-size: 1em; font-family: inherit; font-style: normal; text-align: center; color: white; background-color: rgb(249, 110, 87);" ng-style="{ 'font-size': eo.fontSize, 'font-family': eo.fontFamily, 'font-style': eo.fontStyle, 'font-weight': eo.fontWeight,
+            'text-align': eo.textAlign, 'text-decoration': eo.textDecoration, 'color': eo.color , 'background-color': (eo.borderColor || theme.majorColor)}" ng-bind-html="eo.text | eol2br | unsafe" class="tn-rich-text-content ng-scope ng-binding">
+                        <section>3</section>
+                    </section><span style="display: inline-block; margin-left: 0.4em; max-width: 100%; color: rgb(0, 112, 192); line-height: 1.4;
+              font-size: 1em; word-wrap: break-word !important"><strong style="max-width: 100%; word-wrap: break-word !important; font-size: 1em; font-family: inherit; font-style: normal; font-weight: bolder; text-align: inherit; text-decoration: inherit; color: rgb(249, 110, 87);" tn-page-editable="text1" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe" class="ng-scope tn-page-editable ng-binding">
+                    <section><span style="font-weight: normal;">灵活的用户群组管理</span></section>
+                </strong></span></section>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<!-- end ngRepeat: slice in slices -->
+<div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+    <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts">
+        <!-- ngInclude: (page.templateId) | templateIdToPath: templatePath -->
+        <div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath">
+            <fieldset style="border: 0px; margin-top: 0px; margin-bottom: 0px; clear: both; font-size: 100%; font-family: inherit; font-style: normal; font-weight: inherit; text-align: justify; text-decoration: inherit; color: inherit;" tn-page-editable="text0" class="ng-scope tn-page-editable ng-binding" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe">
+                <section><br></section>
+                <section style="width:100%">
+                    糖堂支持自由创建群组，老师可添加家长、学生到相应的兴趣组及学习组中，组内成员、内容私密安全。老师可以根据不同小朋友的特点，单独安排学习任务，既照顾到整体，也能关注到个别，因材施教很简单。
+                </section>
+                <section><br></section>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<!-- end ngRepeat: slice in slices -->
+<div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+    <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts">
+        <!-- ngInclude: (page.templateId) | templateIdToPath: templatePath -->
+        <div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath">
+            <fieldset style="border:0;box-sizing: border-box; width: 100%; margin: 0.8em 0 0.2em 0;clear: both" class="ng-scope"><img style="box-sizing: border-box;
+              width: 50%;
+              height: auto !important;
+              text-align: start" src="http://statics.xiumi.us/xmi/rc/6STZ/i/c20a2ca580cfa3486ffac1ac4f539615-sz_40501.png" tn-page-editable="img0" tn-page-editable-type="image" ng-src="http://statics.xiumi.us/xmi/rc/6STZ/i/c20a2ca580cfa3486ffac1ac4f539615-sz_40501.png" class="ng-scope tn-page-editable"></fieldset>
+        </div>
+    </div>
+</div>
+<!-- end ngRepeat: slice in slices -->
+<div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+    <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts">
+        <!-- ngInclude: (page.templateId) | templateIdToPath: templatePath -->
+        <div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath">
+            <fieldset style="border:0;margin: 0.8em 0 0.5em 0" class="ng-scope">
+                <section style="display: inline-block; padding: 0px 2px 2px; box-sizing: border-box; border-bottom-width: 2px; border-bottom-style: solid; border-color: rgb(249, 110, 87); line-height: 1; font-size: 1em; font-family: inherit; font-style: normal; font-weight: inherit; text-align: center; text-decoration: inherit; color: white; background-color: transparent;" tn-page-editable="richtext0" tn-not-editable-attr="backgroundColor" tn-page-editable-type="ed-type-rich-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor),
+  'background-color': (eo.backgroundColor || theme.majorColor),
+  'border-color'    : (eo.borderColor || theme.majorColor)
+} " class="ng-scope tn-page-editable">
+                    <section style="display: inline-block; margin: 0px; padding: 0.3em 0.4em; min-width: 1.8em; min-height: 1.6em; border-radius: 80% 100% 90% 20%; line-height: 1; word-wrap: break-word !important; font-size: 1em; font-family: inherit; font-style: normal; text-align: center; color: white; background-color: rgb(249, 110, 87);" ng-style="{ 'font-size': eo.fontSize, 'font-family': eo.fontFamily, 'font-style': eo.fontStyle, 'font-weight': eo.fontWeight,
+            'text-align': eo.textAlign, 'text-decoration': eo.textDecoration, 'color': eo.color , 'background-color': (eo.borderColor || theme.majorColor)}" ng-bind-html="eo.text | eol2br | unsafe" class="tn-rich-text-content ng-scope ng-binding">
+                        <section>4</section>
+                    </section><span style="display: inline-block; margin-left: 0.4em; max-width: 100%; color: rgb(0, 112, 192); line-height: 1.4;
+              font-size: 1em; word-wrap: break-word !important"><strong style="max-width: 100%; word-wrap: break-word !important; font-size: 1em; font-family: inherit; font-style: normal; font-weight: bolder; text-align: inherit; text-decoration: inherit; color: rgb(249, 110, 87);" tn-page-editable="text1" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe" class="ng-scope tn-page-editable ng-binding">
+                    <section><span style="font-weight: normal;">随时随地毫无障碍的沟通</span></section>
+                </strong></span></section>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<!-- end ngRepeat: slice in slices -->
+<div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+    <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts">
+        <!-- ngInclude: (page.templateId) | templateIdToPath: templatePath -->
+        <div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath">
+            <fieldset style="border: 0px; margin-top: 0px; margin-bottom: 0px; clear: both; font-size: 100%; font-family: inherit; font-style: normal; font-weight: inherit; text-align: justify; text-decoration: inherit; color: inherit;" tn-page-editable="text0" class="ng-scope tn-page-editable ng-binding" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe">
+                <section><span style="color: inherit; font-family: inherit; font-size: 100%; font-weight: inherit; text-decoration: inherit; line-height: 1.6;"><br></span>
+                </section>
+                <section style="width:100%"><span style="color: inherit; font-family: inherit; font-size: 100%; font-weight: inherit; text-decoration: inherit; line-height: 1.6;">支持图片、语音、文字等多种形式的即时通讯，让沟通更加及时，更加有趣。不再错过孩子每一个成长的精彩时刻。</span><br>
+                </section>
+                <section><span style="color: inherit; font-family: inherit; font-size: 100%; font-weight: inherit; text-decoration: inherit; line-height: 1.6;"><br></span>
+                </section>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<!-- end ngRepeat: slice in slices -->
+<div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+    <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts">
+        <!-- ngInclude: (page.templateId) | templateIdToPath: templatePath -->
+        <div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath">
+            <fieldset style="border:0;box-sizing: border-box; width: 100%; margin: 0.8em 0 0.2em 0;clear: both" class="ng-scope"><img style="box-sizing: border-box;
+              width: 50%;
+              height: auto !important;
+              text-align: start" src="http://statics.xiumi.us/xmi/rc/6STZ/i/d552a16d859c10d78d5e7d4254ecf406-sz_268677.png" tn-page-editable="img0" tn-page-editable-type="image" ng-src="http://statics.xiumi.us/xmi/rc/6STZ/i/d552a16d859c10d78d5e7d4254ecf406-sz_268677.png" class="ng-scope tn-page-editable"></fieldset>
+        </div>
+    </div>
+</div>
+<!-- end ngRepeat: slice in slices -->
+<div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+    <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts">
+        <!-- ngInclude: (page.templateId) | templateIdToPath: templatePath -->
+        <div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath">
+            <fieldset style="border:0;margin: 0.8em 0 0.5em 0" class="ng-scope">
+                <section style="display: inline-block; padding: 0px 2px 2px; box-sizing: border-box; border-bottom-width: 2px; border-bottom-style: solid; border-color: rgb(249, 110, 87); line-height: 1; font-size: 1em; font-family: inherit; font-style: normal; font-weight: inherit; text-align: center; text-decoration: inherit; color: white; background-color: transparent;" tn-page-editable="richtext0" tn-not-editable-attr="backgroundColor" tn-page-editable-type="ed-type-rich-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor),
+  'background-color': (eo.backgroundColor || theme.majorColor),
+  'border-color'    : (eo.borderColor || theme.majorColor)
+} " class="ng-scope tn-page-editable">
+                    <section style="display: inline-block; margin: 0px; padding: 0.3em 0.4em; min-width: 1.8em; min-height: 1.6em; border-radius: 80% 100% 90% 20%; line-height: 1; word-wrap: break-word !important; font-size: 1em; font-family: inherit; font-style: normal; text-align: center; color: white; background-color: rgb(249, 110, 87);" ng-style="{ 'font-size': eo.fontSize, 'font-family': eo.fontFamily, 'font-style': eo.fontStyle, 'font-weight': eo.fontWeight,
+            'text-align': eo.textAlign, 'text-decoration': eo.textDecoration, 'color': eo.color , 'background-color': (eo.borderColor || theme.majorColor)}" ng-bind-html="eo.text | eol2br | unsafe" class="tn-rich-text-content ng-scope ng-binding">
+                        <section>5</section>
+                    </section><span style="display: inline-block; margin-left: 0.4em; max-width: 100%; color: rgb(0, 112, 192); line-height: 1.4;
+              font-size: 1em; word-wrap: break-word !important"><strong style="max-width: 100%; word-wrap: break-word !important; font-size: 1em; font-family: inherit; font-style: normal; font-weight: bolder; text-align: inherit; text-decoration: inherit; color: rgb(249, 110, 87);" tn-page-editable="text1" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe" class="ng-scope tn-page-editable ng-binding">
+                    <section><span style="font-weight: normal;">多终端多平台完全免费</span></section>
+                </strong></span></section>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<!-- end ngRepeat: slice in slices -->
+<div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+    <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts">
+        <!-- ngInclude: (page.templateId) | templateIdToPath: templatePath -->
+        <div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath">
+            <fieldset style="border: 0px; margin-top: 0px; margin-bottom: 0px; clear: both; font-size: 100%; font-family: inherit; font-style: normal; font-weight: inherit; text-align: justify; text-decoration: inherit; color: inherit;" tn-page-editable="text0" class="ng-scope tn-page-editable ng-binding" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe">
+                <section><br></section>
+                <section style="width:100%">老师可以通过Pc、手机、平板电脑等与学生、家长进行沟通互动。不需要支付任何额外费用。</section>
+                <section><br></section>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<!-- end ngRepeat: slice in slices -->
+<div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+    <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts">
+        <!-- ngInclude: (page.templateId) | templateIdToPath: templatePath -->
+        <div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath">
+            <fieldset style="border: 0px; margin-top: 0px; margin-bottom: 0px; clear: both; font-size: 100%; font-family: inherit; font-style: normal; font-weight: inherit; text-align: justify; text-decoration: inherit; color: rgb(249, 110, 87);" tn-page-editable="text0" class="ng-scope tn-page-editable ng-binding" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe">
+                <section>您可以通过百度搜索“糖堂 社交化”进行下载</section>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<!-- end ngRepeat: slice in slices -->
+<div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+    <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts">
+        <!-- ngInclude: (page.templateId) | templateIdToPath: templatePath -->
+        <div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath">
+            <fieldset style="border: 0px; margin-top: 0px; margin-bottom: 0px; clear: both; font-size: 100%; font-family: inherit; font-style: normal; font-weight: inherit; text-align: justify; text-decoration: inherit; color: inherit;" tn-page-editable="text0" class="ng-scope tn-page-editable ng-binding" tn-page-editable-type="ed-type-text" ng-style=" {
+  'font-size'       : eo.fontSize || 'inherit',
+  'font-family'     : eo.fontFamily || 'inherit',
+  'font-style'      : eo.fontStyle || 'inherit',
+  'font-weight'     : eo.fontWeight || 'inherit',
+  'text-align'      : eo.textAlign || 'inherit',
+  'text-decoration' : eo.textDecoration || 'inherit',
+  'color'           : (eo.color || theme.majorColor)
+} " ng-bind-html="eo.text | eol2br | unsafe">
+                <section>更多信息请访问 <a href="http://www.sweetclass.com?s=email&amp;ts={time}&amp;ti=4&amp;kw={ref}">http://sweetclass.com</a>
+                </section>
+
+                <section>或者微信扫描以下二维码，关注我们公众号：</section>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<!-- end ngRepeat: slice in slices -->
+<div class="x3-slice-plate clearfix ng-scope" ng-repeat="slice in slices">
+    <div class="tn-slice-loader ng-isolate-scope" tn-page-loader="" page="slice" tn-page-show-with-transition="true" theme="(slice.themeColor | clr2theme)" template-path="/templates/parts">
+        <!-- ngInclude: (page.templateId) | templateIdToPath: templatePath -->
+        <div class="tn-page ng-scope" ng-include="(page.templateId) | templateIdToPath: templatePath">
+            <fieldset style="border:0;box-sizing: border-box; width: 100%; margin: 0.8em 0 0.2em 0;clear: both" class="ng-scope"><img style="box-sizing: border-box;
+              width: 50%;
+              height: auto !important;
+              text-align: start" src="http://statics.xiumi.us/xmi/rc/6STZ/i/bc0f31863b4d94cc192e17fd5131d987-sz_28091.jpg" tn-page-editable="img0" tn-page-editable-type="image" ng-src="http://statics.xiumi.us/xmi/rc/6STZ/i/bc0f31863b4d94cc192e17fd5131d987-sz_28091.jpg" class="ng-scope tn-page-editable"></fieldset>
+        </div>
+    </div>
+</div>
+<!-- end ngRepeat: slice in slices -->
+</section>
+
+<hr>
+
+</section>
+</div>
+
+
 
 <p> {{ page.date | date_to_string }} </p>
+
+
+
+</body></html>
+
 
